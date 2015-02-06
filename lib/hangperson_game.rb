@@ -19,19 +19,19 @@ class HangpersonGame
   		raise ArgumentError
   	end
   	letter.downcase!
-  	isChanged = false
+  	is_changed = false
   	if self.word.include? letter
   		unless self.guesses.include? letter
   			self.guesses += letter
-  			isChanged = true
+  			is_changed = true
   		end
   	else
   		unless self.wrong_guesses.include? letter
   			self.wrong_guesses += letter
-  			isChanged = true
+  			is_changed = true
   		end
   	end
-  	return isChanged
+  	return is_changed
   end
 
   def word_with_guesses
